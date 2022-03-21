@@ -20,10 +20,16 @@ public class TeacherController {
 	@GetMapping(path="/teachers/{dept}")
 	public String getTeachersByDept(@PathVariable("dept") String dept) {
 		List<String> list = Arrays.asList("Alva","Anwar","Kamla");
+	
 		if(dept.equals("ece")) {
-			list = Arrays.asList("Alva","Anwar","kanni");
+			 list = Arrays.asList("Alva","Anwar","kanni");
 		}
 		return  list.toString();
+	}
+	@GetMapping(path="/teachers/{id}")
+	public String getTeachersById(@PathVariable("id") int id) {
+		List<String> list = Arrays.asList("alla","Anwar","Kala");
+		return list.toString();
 	}
 	
 }
